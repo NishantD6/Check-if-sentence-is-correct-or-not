@@ -5,6 +5,27 @@ Created on Thu Mar 21 11:31:19 2019
 
 @author: Nishant Das 
 
+Language Models calculate the probability of a sequence of words. 
+With this we can model sentences and determine if the a sentence is correct or incorrect given the probability of sequences of words in that given sentence.
+If the probability of the sequence of words in a sentence follows a distribution typical of the language (English in this case), we can classify a sentence as being correct or incorrect, or real or not real.
+
+For this project, I have created an algorithm to determine if a sentence given by a user is correct or incorrect. 
+
+Words typically are used in association with other words. 
+This is typical when languages have a structure (Noun followed by a verb, etc.). 
+Hence, by looking at word(t) and word(t+1) occurrences (adjacent word occurrences), we can see how likely a sentence is real or not. 
+
+Bigram is a sequence of two consecutive words in a sentence. 
+
+In this project, I use the Brown Corpus (explained in the code development section) of words to train a Hidden Markov Model that is a variation of Viterbi Algorithm.
+The Viterbi Algorithm is a Dynamic Programming algorithm to the the most likely sequence of hidden states – known as the Viterbi path. 
+Given the model, we can then pass English sentences into the model to predict if the sentence is an actual English sentence or not. 
+
+The Brown Corpus 500 samples of English-language text, totaling roughly one million words, compiled from works published in the United States in 1961.
+
+
+
+
 """
 # Importing relevent libraries
 from __future__ import print_function, division
